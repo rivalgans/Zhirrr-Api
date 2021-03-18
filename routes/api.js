@@ -3,7 +3,7 @@ __path = process.cwd()
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var zahirr = db.get("vallzpn");
+var zahirr = db.get("zahirr");
 } catch (e) {
 	console.log('')
 }
@@ -163,7 +163,7 @@ var len = 15
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'vallzpn') return res.json(loghandler.invalidKey)
+    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.find()
@@ -224,7 +224,7 @@ router.get('/addapikey', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'vallzpn') return res.json(loghandler.invalidKey)
+    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.insert({

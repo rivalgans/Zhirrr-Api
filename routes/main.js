@@ -15,7 +15,7 @@ router.get('/config', (req, res) => {
     config = {
         status: true,
         result: {
-            prefix : '#',
+            prefix : '/',
             namabot: 'ZX BOT',
             namaowner: 'RivalGans',
             instagram: 'vall.zpn',
